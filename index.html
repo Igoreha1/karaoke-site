@@ -1,0 +1,439 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Караоке-клуб</title>
+
+    <link rel="stylesheet" href="css/style.css">
+    <script src="js/slider.js"></script>
+    <script src="js/slider2.js"></script>
+    <script src="js/answer.js"></script>
+</head>
+<body>
+
+    <header>
+        <div class="logo">
+            <img src="images/logo.svg" alt="Логотип">
+        </div>
+        
+        <div class="contact-block">
+            <div class="icon">
+                <img src="images/icon_mobile.svg" alt="Телефон" width="60" height="60">
+            </div>
+            <span class="phone">+38 (097) 970-90-90</span>
+        </div>
+        
+        <div class="address-block">
+            <div class="icon">
+                <img src="images/icon_point.svg" alt="Метро" width="60" height="60">
+            </div>
+            <span class="address">м. Лубянка</span>
+        </div>
+
+        <div class="buttons-container">
+            <div class="btn">
+                <button class="btn-halls">Наши залы</button>
+                <button class="btn-book">Забронировать</button>
+            </div>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section">
+            <img src="images/background-image.png" alt="Фон караоке зала" class="hero-bg">
+
+            <img src="images/birka.png" alt="Декоративная бирка" class="birka-image">
+            
+            <img src="images/main_girl.png" alt="Девушка с микрофоном" class="top-image">
+            
+            <div class="hero-content">
+                <h1 class="main-title">Арендуй караоке зал до 10 человек</h1>
+                <p class="sub-title">Возьми алкоголь и еду с собой</p>
+            </div>
+    
+            <div class="features-container">
+                <div class="feature-item">
+                    <img src="images/icon-verified.png" alt="Галочка" class="feature-icon">
+                    <span class="feature-text">Если хочешь попеть и оторваться</span>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="images/icon-verified.png" alt="Галочка" class="feature-icon">
+                    <span class="feature-text">Отдохнуть после работы</span>
+                </div>
+                
+                <div class="feature-item">
+                    <img src="images/icon-verified.png" alt="Галочка" class="feature-icon">
+                    <span class="feature-text">Хорошо провести время</span>
+                </div>
+            </div>
+    
+            <div class="booking-button-container">
+                <button class="booking-button">Забронировать онлайн</button>
+            </div>
+
+            <div class="telegram-float">
+                <img src="images/telegram.png" alt="Телеграм" class="telegram-icon">
+                <span class="telegram-text">Связаться с нами</span>
+            </div>
+        </section>
+
+        <section class="features-list">
+            <div class="advantage-item">
+                <img src="images/icon1.svg" alt="Icon 1" class="advantage-image">
+                <span class="advantage-description">Профессиональное караоке AST-50</span>
+            </div>
+            <div class="advantage-item">
+                <img src="images/icon2.svg" alt="Icon 2" class="advantage-image">
+                <span class="advantage-description">Без пробкового сбора</span>
+            </div>
+            <div class="advantage-item">
+                <img src="images/icon3.svg" alt="Icon 3" class="advantage-image">
+                <span class="advantage-description">Без депозита</span>
+            </div>
+            <div class="advantage-item">
+                <img src="images/icon4.svg" alt="Icon 4" class="advantage-image">
+                <span class="advantage-description">Скидка в День Рождения</span>
+            </div>
+        </section>
+
+        <section class="halls-section">
+            <div class="halls-container">
+                <div class="halls-header">
+                    <h2 class="halls-title">Наши залы</h2>
+                    <p class="halls-subtitle">Ознакомьтесь с атмосферой праздника</p>
+                </div>
+                
+                <!-- Блок переключателей залов -->
+                <div class="halls-selector">
+                    <button class="hall-selector-btn active" data-hall="1">HALL №1</button>
+                    <button class="hall-selector-btn" data-hall="2">HALL №2</button>
+                    <button class="hall-selector-btn" data-hall="3">HALL №3</button>
+                    <button class="hall-selector-btn" data-hall="4">HALL №4</button>
+                </div>
+                
+                <!-- Блок информации о зале -->
+                <div class="hall-info">
+                    <div class="hall-info-item">
+                        <img src="images/position.svg" alt="">
+                        <div class="hall-info-number">№1</div>
+                    </div>
+                    <div class="hall-info-item">
+                        <img src="images/mashtab.svg" alt="">
+                        <div class="hall-info-area">40 м²</div>
+                    </div>
+                    <div class="hall-info-item">
+                        <img src="images/people.svg" alt="">
+                        <div class="hall-info-capacity">до 20-ти человек</div>
+                    </div>
+                </div>
+                
+                <div class="halls-navigation">
+                    <button id="prev-button" class="nav-button" aria-label="Предыдущий слайд"></button>
+                    <div class="pagination-info">
+                        <span id="current-slide">1</span> из <span id="total-slides">15</span>
+                    </div>
+                    <button id="next-button" class="nav-button" aria-label="Следующий слайд"></button>
+                </div>
+        
+                <div class="halls-gallery">
+                    <div class="main-hall-image">
+                        <img src="images/hall1/main.jpg" alt="Главный зал" class="hall-img" id="main-hall-img">
+                    </div>
+                    <div class="secondary-hall-images"></div>
+                </div>
+                
+                <div class="booking-buton-container">
+                    <button class="booking-btn">Забронировать</button>
+                </div>
+            </div>
+        </section>
+
+        <section class="advantages-section">
+            <div class="advantages-container">
+                <div class="advantages-header">
+                    <h2 class="advantages-title">Наши Преимущества</h2>
+                    <p class="advantages-subtitle">Почему гости выбирают нас</p>
+                </div>
+                <div class="advantages-puper">
+                    <div class="advantages-grid">
+                        <!-- Карточка 1 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon_shirt.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">Никакого дресс-контроля</h3>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Карточка 2 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon_sd.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">~40.000 песен в сет листе</h3>
+                                    <p class="card-subtitle">Более 50,000 студийных фонограмм<br>Ежемесячное обновления репертуара</p>
+                                </div>
+                                <div class="card-icon-group">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Карточка 3 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon_party.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">Индивидуальные залы</h3>
+                                    <p class="card-subtitle">Только Ваша компания</p>
+                                </div>
+                                <div class="card-icon-group">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Карточка 4 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon3.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">Без депозита</h3>
+                                    <p class="card-subtitle">Мы не берем депозит<br>Оплата происходит за человека в час</p>
+                                </div>
+                                <div class="card-icon-group">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Карточка 5 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon_goal.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">В самом центре Москвы</h3>
+                                    <p class="card-subtitle">м. Лубянка</p>
+                                </div>
+                                <div class="card-icon-group">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <!-- Карточка 6 -->
+                        <div class="advantage-card">
+                            <div class="card-content">
+                                <div class="card-icon">
+                                    <img src="images/icon2.svg" alt="Иконка" class="card-icon">
+                                </div>
+                                <div class="card-text">
+                                    <h3 class="card-title">Нет пробкового сбора</h3>
+                                    <p class="card-subtitle">Можно приносить с собой еду, напитки и алкоголь без пробкового сбора</p>
+                                </div>
+                                <div class="card-icon-group">
+                                    <img src="images/icons8_checked 1.svg" alt="Иконка" class="card-icon">
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="ride">
+                        <div class="advantages-booking-wrapper">
+                            <button class="advantages-booking-btn">Забронировать зал</button>
+                        </div>
+                        <div class="advantages-side-image">
+                            <img src="images/microphone.png" alt="Дополнительное изображение">
+                        </div>
+                    </div>
+                </div>
+                
+            </div>
+        </section>
+
+
+        <section class="booking-section">
+            <div class="booking-header">
+              <h2 class="booking-title">Как забронировать зал?</h2>
+              <p class="booking-subtitle">Бронирование по шагам в чат-боте</p>
+            </div>
+            
+            <div class="booking-slider">
+              <div class="slider-controls">
+                <button class="slider-prev">
+                    <img src="images/arrow-left.svg" alt="">
+                </button>
+                <div class="slider-counter">
+                  <span class="current-slide">1</span> из <span class="total-slides">9</span>
+                </div>
+                <button class="slider-next">
+                    <img src="images/arrow-right.svg" alt="">
+                </button>
+              </div>
+              
+              <div class="slider-container">
+                <div class="slider-track">
+                  <div class="slider-item">
+                    <img src="images/phone/1.png" alt="Шаг 1" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/2.png" alt="Шаг 2" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/3.png" alt="Шаг 3" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/4.png" alt="Шаг 4" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/5.png" alt="Шаг 5" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/6.png" alt="Шаг 6" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/7.png" alt="Шаг 7" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/8.png" alt="Шаг 8" class="slider-image">
+                  </div>
+                  <div class="slider-item">
+                    <img src="images/phone/9.png" alt="Шаг 9" class="slider-image">
+                  </div>
+                </div>
+              </div>
+            </div>
+        </section>
+
+          <section class="faq-section">
+            <div class="faq-content-wrapper">
+              <div class="faq-main-content">
+                <div class="faq-header">
+                  <h2 class="faq-title">Вопросы и ответы</h2>
+                  <p class="faq-subtitle">Мы подготовили ответы на часто задаваемые вопросы</p>
+                </div>
+          
+                <div class="faq-buttons-container">
+                  <!-- Кнопка 1 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Какое у вас караоке?</button>
+                    <div class="faq-answer">
+                      <p>Более 50,000 студийных фонограмм. Из них 80% - оригинальные минусовки в качестве PRO (mp3 - WAV).</p>
+                      <p>Ежемесячное обновления репертуара.</p>
+                      <p>Более 10,000 специальных фонограмм в сопровождении оригинальных видеоклипов.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 2 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Есть ли у вас английские песни?</button>
+                    <div class="faq-answer">
+                      <p>Да, конечно, в нашем караоке-зале есть большой выбор английских песен! 🎤🎶</p>
+                      <p>У нас представлены хиты разных эпох и жанров: от классики The Beatles, Queen и ABBA до современных треков Taylor Swift, Ed Sheeran, The Weeknd и многих других.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 3 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Какие способы оплаты?</button>
+                    <div class="faq-answer">
+                      <p>У нас доступно несколько удобных способов оплаты:</p>
+                      <p>💰 Наличные – можно рассчитаться на месте в рублях.</p>
+                      <p>💳 Банковские карты – принимаем Visa, Mastercard, МИР.</p>
+                      <p>📱 Перевод по номеру телефона (СБП) – быстро и без комиссии!</p>
+                      <p>🔳 QR-оплата (Сбер, Тинькофф и др.) – просто наведите камеру!</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 4 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Сколько микрофонов в каждом зале?</button>
+                    <div class="faq-answer">
+                      <p>В наших залах количество микрофонов зависит от размера компании:</p>
+                      <p>Малый зал (до 6 человек): 2 микрофона</p>
+                      <p>Средний зал (до 12 человек): 3–4 микрофона</p>
+                      <p>Большой зал/VIP-зона (до 20 человек): 5–6 микрофонов</p>
+                      <p>По запросу можем добавить дополнительные микрофоны.</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 5 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Есть ли скидки?</button>
+                    <div class="faq-answer">
+                      <p>Нет</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 6 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Какое время работы?</button>
+                    <div class="faq-answer">
+                      <p>Ответ на шестой вопрос...</p>
+                    </div>
+                  </div>
+                  
+                  <!-- Кнопка 7 -->
+                  <div class="faq-button-item">
+                    <button class="faq-button">Можно ли с детьми?</button>
+                    <div class="faq-answer">
+                      <p>Ответ на седьмой вопрос...</p>
+                    </div>
+                  </div>
+                </div>
+              </div>
+          
+              <div class="faq-side-content">
+                <div class="slippers-block">
+                  <div class="slippers-text">
+                    В нашем заведении Бельгийский ковролин. На входе выдают <span class="highlight">индивидуально запакованные тапочки</span>, 
+                    в которые необходимо переобуться.
+                  </div>
+                  <img src="images/slippers.png" alt="Тапочки" class="slippers-image">
+                  <button class="book-button">Забронировать зал</button>
+                </div>
+              </div>
+            </div>
+          </section>
+        </main>
+
+        <footer class="footer-custom">
+            <div class="footer-logo">
+                <img src="images/logo.svg" alt="Логотип">
+            </div>
+            
+            <div class="footer-contact">
+                <div class="footer-icon">
+                    <img src="images/icon_mobile.svg" alt="Телефон" width="60" height="60">
+                </div>
+                <span class="footer-phone">+38 (097) 970-90-90</span>
+            </div>
+            
+            <div class="footer-address">
+                <div class="footer-icon">
+                    <img src="images/icon_point.svg" alt="Метро" width="60" height="60">
+                </div>
+                <span class="footer-address-text">м. Лубянка</span>
+            </div>
+        
+            <div class="footer-buttons">
+                <button class="footer-btn-route">Построить маршрут</button>
+            </div>
+        </footer>        
+
+</body>
+</html>
